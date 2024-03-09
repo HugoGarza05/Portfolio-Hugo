@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hugo Garza - Portfolio</title>
+    <link rel="stylesheet" href="app.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="character-sheet">
+                <img src="path/to/avatar.jpg" alt="Character Portrait">
+                <div class="character-info">
+                    <h1>Hugo Garza</h1>
+                    <p class="role">Web Developer</p>
+                    <div class="level-bar">
+                        <span class="level-progress"></span>
+                    </div>
+                    <div class="xp-container">
+                        <span class="xp-text">XP: <span class="current-xp">0</span></span>
+                    </div>
+                    <p class="level">Level 1</p>
+                </div>
+                <div class="social-links">
+                    <a href="#" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
+                    <a href="#" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                    <!-- Add more social links as needed -->
+                </div>
+            </div>
+        </div>
+
+        <div class="level-up-popup" id="levelUpPopup">
+            <span class="level-up-text">Level Up!</span>
+        </div>
+    </header>
+
+    <div id="loadingScreen" class="visible">
+        <canvas></canvas>
+    </div>
+
+    <!-- Timeline Section -->
+    <section id="professional-quests">
+        <div class="container">
+            <h2>Professional Questline</h2>
+    
+            <!-- Quest Item 1 -->
+            <div class="quest-item" data-quest-id="1" data-modal-id="quest-modal-1">
+                <h3>Web Developer Apprentice</h3>
+                <p class="quest-description">
+                    Embarked on the journey of the...
+                </p>
+            </div>
+
+            <!-- Modal Container 1 -->
+            <div class="modal-container" id="quest-modal-1">
+                <!-- Modal Content -->
+                <div class="modal-content">
+                    <span class="close-modal">&times;</span>
+                    <h2>Quest Details</h2>
+                    <p class="quest-description" id="quest-description-1">Embarked on the journey of web development, learning the basics of HTML, CSS, and JavaScript.</p>
+                    <!-- Add more details as needed -->
+                </div>
+            </div>
+
+            <!-- Quest Item 2 -->
+            <div class="quest-item" data-quest-id="2" data-modal-id="quest-modal-2">
+                <h3>Frontend Wizard</h3>
+                <p class="quest-description">
+                    Mastered the art of crafting captivating user interfaces with advanced knowledge of frontend technologies.
+                </p>
+            </div>
+
+            <!-- Modal Container 2 -->
+            <div class="modal-container" id="quest-modal-2">
+                <!-- Modal Content -->
+                <div class="modal-content">
+                    <span class="close-modal">&times;</span>
+                    <h2>Quest Details</h2>
+                    <p class="quest-description" id="quest-description-2">Mastered the art of crafting captivating user interfaces with advanced knowledge of frontend technologies.</p>
+                    <!-- Add more details as needed -->
+                </div>
+            </div>
+
+            <!-- Quest Item 3 -->
+            <div class="quest-item" data-quest-id="3" data-modal-id="quest-modal-3">
+                <h3>Backend Sorcerer</h3>
+                <p class="quest-description">
+                    Delved into the realms of server-side development, wielding the powers of Python, Node.js, and databases.
+                </p>
+            </div>
+
+            <!-- Modal Container 3 -->
+            <div class="modal-container" id="quest-modal-3">
+                <!-- Modal Content -->
+                <div class="modal-content">
+                    <span class="close-modal">&times;</span>
+                    <h2>Quest Details</h2>
+                    <p class="quest-description" id="quest-description-3">Delved into the realms of server-side development, wielding the powers of Python, Node.js, and databases.</p>
+                    <!-- Add more details as needed -->
+                </div>
+            </div>
+
+    
+            <!-- Add more quest items as needed -->
+    
+        </div>
+    </section> 
+
+    <!-- Projects Section -->
+    <section id="achievements">
+        <div class="container">
+            <h2>Achievements</h2>
+            <div class="achievement-item" data-xp="50">
+                <img src="path/to/project-1-badge.png" alt="Project 1 Badge">
+                <h3>Project 1</h3>
+                <p>Description of the achievement or project.</p>
+            </div>
+            <div class="achievement-item" data-xp="75">
+                <img src="path/to/project-2-badge.png" alt="Project 2 Badge">
+                <h3>Project 2</h3>
+                <p>Description of the achievement or project.</p>
+            </div>
+            <!-- Add more achievement items as needed -->
+        </div>
+        
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <div class="container">
+            <h2>Skills</h2>
+            <div class="skill-category frontend-magic">
+                <i class="fas fa-magic"></i>
+                <h3>Frontend Magic</h3>
+                <div class="skill-item" data-details="HTML: The backbone of web development">
+                    <i class="fa-brands fa-html5"></i>
+                    <p>HTML</p>
+                    <span class="attribute">+3</span>
+                </div>
+                <div class="skill-item" data-details="CSS: Styling magic for web pages">
+                    <i class="fa-brands fa-css3"></i>
+                    <p>CSS</p>
+                    <span class="attribute">+4</span>
+                </div>
+                <div class="skill-item" data-details="JavaScript: Making web pages interactive">
+                    <i class="fa-brands fa-js"></i>
+                    <p>JavaScript</p>
+                    <span class="attribute">+5</span>
+                </div>
+                <!-- Add more frontend skills as needed -->
+            </div>
+            <!-- Add more skill categories as needed -->
+        </div>
+    </section>
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <h2>Contact</h2>
+            <form action="submit_form.php" method="post"> <!-- Replace with your form handling script -->
+                <!-- Add your form fields here -->
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Magic Sidebar -->
+    <div class="magic-sidebar" id="magicSidebar">
+        <div class="rpg-buttons">
+            <a class="magic-sidebar-button" href="#professional-quests">Start Quest</a>
+            <a class="magic-sidebar-button" href="#achievements">Level Up</a>
+            <a class="magic-sidebar-button" href="#skills">Skills</a>
+        </div>
+</div>
+<div class="magic-overlay" id="magicOverlay"></div>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <div class="inventory-scroll">
+                <div class="contact-item">
+                    <i class="fa-solid fa-envelope"></i>
+                    <p>Email: frayzout@gmail.com</p>
+                </div>
+                <div class="contact-item">
+                    <i class="fa-solid fa-phone"></i>
+                    <p>Phone: +956 378 3188</p>
+                </div>
+                <div class="contact-item">
+                    <i class="fa-brands fa-square-instagram"></i>
+                    <p>Follow me on <a href="#" target="_blank">Instagram</a></p>
+                </div>
+            </div>
+            <p>&copy; 2024 Hugo Garza. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://kit.fontawesome.com/be161f684a.js" crossorigin="anonymous"></script>
+    <script src="xp-app.js"></script>
+    <script src="quest.js"></script>
+    <script src="sidebar.js"></script>
+    <script src="loadingScreen.js"></script>
+    
+</body>
+</html>
